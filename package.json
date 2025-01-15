@@ -1,0 +1,21 @@
+{
+  "name": "singularityfinance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@antiadmin/anticaptchaofficial": "^1.0.49",
+    "axios": "^1.7.9",
+    "chalk": "^5.4.1",
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^5.7.2",
+    "https-proxy-agent": "^7.0.6"
+  }
+}
