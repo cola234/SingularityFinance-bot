@@ -38,7 +38,8 @@ node index.js
 
 ## 注意
 
-- 确保 Anti-captcha 账户余额充足
+- 本脚本使用 Anti-captcha 进行验证码解决 请保证Anti-captcha余额充足
+- Anti-captcha注册链接：https://getcaptchasolution.com/dlknc8zcee
 - 脚本全开源且运行在本地，使用风险自负
 - 建议使用新钱包，因使用造成的损失作者不承担责任
 - 根据硬件情况调整运行参数，避免过度消耗系统资源
