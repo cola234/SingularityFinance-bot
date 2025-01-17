@@ -5,7 +5,8 @@ const path = require('path');
 require('dotenv').config();
 
 // 读取 ABI 文件
-const wrappedSFIABI = require('E:\\B\\Jiaoben\\SingularityFinance\\src\\ABI\\WrappedSFI.json');
+
+const wrappedSFIABI = require(path.join(__dirname, 'ABI', 'WrappedSFI.json'));
 // WrappedSFI 合约地址
 const contractAddress = '0x6dC404EFd04B880B0Ab5a26eF461b63A12E3888D';
 

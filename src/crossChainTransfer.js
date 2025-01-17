@@ -1,6 +1,8 @@
 const ethers = require('ethers');
 const logger = require('./logger');
 require('dotenv').config();
+const fs = require('fs');
+const path = require('path');
 
 async function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -26,7 +28,8 @@ async function crossChainTransfer(wallet, targetAddress, amount) {
     const amountWei = ethers.utils.parseEther(amount.toString());
     const provider = wallet.provider;
     const contractAddress = '0x4200000000000000000000000000000000000016';
-    const abi = require('E:\\B\\Jiaoben\\SingularityFinance\\src\\ABI\\L2ToL1MessagePasserABI.json');
+    // 读取 WrappedSFI ABI
+    const abi = JSON.parse(fs.readFileSync(path.join(__dirname, 'ABI', 'L2ToL1MessagePasserABI.json'), 'utf8'));
     const contract = new ethers.Contract(contractAddress, abi, wallet);
     const gasLimit = 200000;
     const data = '0x';

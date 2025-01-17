@@ -24,24 +24,24 @@ async function runWalletOperations(walletIndex) {
     const address = wallet.address;
 
     try {
-        logger.info(`开始处理钱包 ${walletIndex} (${address})`);
-        logger.info(`领水： ${walletIndex} (${address})`);
-        const result = await claimFaucetWithRetry(address);
-        switch(result.status) {
-            case 'success':
-                logger.info('水龙头领取成功', result.data);
-                break;
-            case 'already_claimed':
-                logger.warn('已经领取过水龙头', result.message);
-                break;
-            case 'failed':
-                logger.error('水龙头领取失败', result.message);
-                break;
-            default:
-                logger.info('未知状态', result);
-        }
-        logger.info(`钱包 ${walletIndex} (${address}) 领水操作完成，等待10秒后继续下一步...`);
-        await delay(10000);
+        // logger.info(`开始处理钱包 ${walletIndex} (${address})`);
+        // logger.info(`领水： ${walletIndex} (${address})`);
+        // const result = await claimFaucetWithRetry(address);
+        // switch(result.status) {
+        //     case 'success':
+        //         logger.info('水龙头领取成功', result.data);
+        //         break;
+        //     case 'already_claimed':
+        //         logger.warn('已经领取过水龙头', result.message);
+        //         break;
+        //     case 'failed':
+        //         logger.error('水龙头领取失败', result.message);
+        //         break;
+        //     default:
+        //         logger.info('未知状态', result);
+        // }
+        // logger.info(`钱包 ${walletIndex} (${address}) 领水操作完成，等待10秒后继续下一步...`);
+        // await delay(10000);
         // 1. 跨链操作
         for (let i = 0; i < 5; i++) {
             const amount = getRandomAmount(0.05, 0.15);
